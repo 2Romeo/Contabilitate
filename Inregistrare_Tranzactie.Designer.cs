@@ -148,13 +148,14 @@
             this.schimbaTipulTranzactieiToolStripMenuItem,
             this.editareTranzactieToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 76);
             // 
             // vizualizareTranzactiiToolStripMenuItem
             // 
             this.vizualizareTranzactiiToolStripMenuItem.Name = "vizualizareTranzactiiToolStripMenuItem";
             this.vizualizareTranzactiiToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.vizualizareTranzactiiToolStripMenuItem.Text = "Vizualizare Tranzactii";
+            this.vizualizareTranzactiiToolStripMenuItem.Click += new System.EventHandler(this.vizualizareTranzactiiToolStripMenuItem_Click);
             // 
             // schimbaTipulTranzactieiToolStripMenuItem
             // 
@@ -168,14 +169,14 @@
             // adaugareSolduriToolStripMenuItem
             // 
             this.adaugareSolduriToolStripMenuItem.Name = "adaugareSolduriToolStripMenuItem";
-            this.adaugareSolduriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.adaugareSolduriToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.adaugareSolduriToolStripMenuItem.Text = "Adaugare solduri";
             this.adaugareSolduriToolStripMenuItem.Click += new System.EventHandler(this.adaugareSolduriToolStripMenuItem_Click);
             // 
             // retragereSolduriToolStripMenuItem
             // 
             this.retragereSolduriToolStripMenuItem.Name = "retragereSolduriToolStripMenuItem";
-            this.retragereSolduriToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.retragereSolduriToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.retragereSolduriToolStripMenuItem.Text = "Retragere solduri";
             this.retragereSolduriToolStripMenuItem.Click += new System.EventHandler(this.retragereSolduriToolStripMenuItem_Click);
             // 
@@ -202,9 +203,11 @@
             this.Controls.Add(this.tBox_val);
             this.Controls.Add(this.lbl_debitor);
             this.Controls.Add(this.tBox_debitor);
+            this.KeyPreview = true;
             this.Name = "Inregistrare_Tranzactie";
             this.Text = "Formular de Tranzactie";
             this.Load += new System.EventHandler(this.Formular_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inregistrare_Tranzactie_KeyDown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

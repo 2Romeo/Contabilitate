@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,6 +39,11 @@
             this.tb_soldCreditor = new System.Windows.Forms.TextBox();
             this.btn_submit = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.vizualizareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stergereContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editareContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_numar.Location = new System.Drawing.Point(188, 50);
             this.tb_numar.Name = "tb_numar";
-            this.tb_numar.Size = new System.Drawing.Size(286, 22);
+            this.tb_numar.Size = new System.Drawing.Size(294, 22);
             this.tb_numar.TabIndex = 2;
             // 
             // tb_denumire
@@ -91,7 +97,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_denumire.Location = new System.Drawing.Point(188, 96);
             this.tb_denumire.Name = "tb_denumire";
-            this.tb_denumire.Size = new System.Drawing.Size(286, 22);
+            this.tb_denumire.Size = new System.Drawing.Size(294, 22);
             this.tb_denumire.TabIndex = 3;
             // 
             // tb_soldDebitor
@@ -100,7 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_soldDebitor.Location = new System.Drawing.Point(188, 146);
             this.tb_soldDebitor.Name = "tb_soldDebitor";
-            this.tb_soldDebitor.Size = new System.Drawing.Size(286, 22);
+            this.tb_soldDebitor.Size = new System.Drawing.Size(294, 22);
             this.tb_soldDebitor.TabIndex = 2;
             // 
             // tb_soldCreditor
@@ -109,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_soldCreditor.Location = new System.Drawing.Point(188, 192);
             this.tb_soldCreditor.Name = "tb_soldCreditor";
-            this.tb_soldCreditor.Size = new System.Drawing.Size(286, 22);
+            this.tb_soldCreditor.Size = new System.Drawing.Size(294, 22);
             this.tb_soldCreditor.TabIndex = 3;
             // 
             // btn_submit
@@ -132,11 +138,43 @@
             this.btn_clear.UseVisualStyleBackColor = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vizualizareConturiToolStripMenuItem,
+            this.stergereContToolStripMenuItem,
+            this.editareContToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 76);
+            // 
+            // vizualizareConturiToolStripMenuItem
+            // 
+            this.vizualizareConturiToolStripMenuItem.Name = "vizualizareConturiToolStripMenuItem";
+            this.vizualizareConturiToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.vizualizareConturiToolStripMenuItem.Text = "Vizualizare conturi";
+            this.vizualizareConturiToolStripMenuItem.Click += new System.EventHandler(this.vizualizareConturiToolStripMenuItem_Click);
+            // 
+            // stergereContToolStripMenuItem
+            // 
+            this.stergereContToolStripMenuItem.Name = "stergereContToolStripMenuItem";
+            this.stergereContToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.stergereContToolStripMenuItem.Text = "Stergere cont";
+            this.stergereContToolStripMenuItem.Click += new System.EventHandler(this.stergereContToolStripMenuItem_Click);
+            // 
+            // editareContToolStripMenuItem
+            // 
+            this.editareContToolStripMenuItem.Name = "editareContToolStripMenuItem";
+            this.editareContToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.editareContToolStripMenuItem.Text = "Editare cont existent";
+            this.editareContToolStripMenuItem.Click += new System.EventHandler(this.editareContToolStripMenuItem_Click);
+            // 
             // Inregistrare_cont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 450);
+            this.ClientSize = new System.Drawing.Size(578, 450);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.tb_soldCreditor);
@@ -147,9 +185,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "Inregistrare_cont";
             this.Text = "Inregistrare cont";
             this.Load += new System.EventHandler(this.Inregistrare_cont_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inregistrare_cont_KeyDown);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +208,9 @@
         private System.Windows.Forms.TextBox tb_soldCreditor;
         private System.Windows.Forms.Button btn_submit;
         private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem vizualizareConturiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stergereContToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editareContToolStripMenuItem;
     }
 }
