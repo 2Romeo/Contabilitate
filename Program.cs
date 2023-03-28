@@ -14,8 +14,8 @@ namespace PawContabilitate
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inregistrare_cont());
-            Application.Run(new Inregistrare_Tranzactie());
+            
+            Application.Run(new Aplicatie_Contabilitate());
         }
     }
 }
