@@ -51,19 +51,30 @@ namespace PawContabilitate
         {
             // Read the text file into a string
             string text = File.ReadAllText("conturi.txt");
+            string text1 = File.ReadAllText("tranzactii.txt");
             //Serialize the text string
             BinaryFormatter bf = new BinaryFormatter();
             FileStream sf = new FileStream("conturi.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             bf.Serialize(sf, text);
             sf.Close();
+            FileStream sf1 = new FileStream("tranzactii.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            bf.Serialize(sf1, text1);
+            sf.Close();
         }
         private void deserializeazaFisiereToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
             BinaryFormatter bf = new BinaryFormatter();
             FileStream fs = new FileStream("conturi.txt", FileMode.Open, FileAccess.Read);
+            FileStream fs1 = new FileStream("tranzactii.txt", FileMode.Open, FileAccess.Read);
             string text = (string)bf.Deserialize(fs);
+            string text1=(string)bf.Deserialize(fs1);
+            fs1.Close();
             fs.Close();
             using (StreamWriter sw = new StreamWriter("conturi.txt"))
+            {
+                sw.WriteLine(text);
+            }
+            using (StreamWriter sw = new StreamWriter("tranzactii.txt"))
             {
                 sw.WriteLine(text);
             }
