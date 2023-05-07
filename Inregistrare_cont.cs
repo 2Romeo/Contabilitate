@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -167,7 +168,15 @@ namespace PawContabilitate
             MessageBox.Show(File.ReadAllText("conturi.txt"),"Conturi");
         }
 
-        
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            
+        }
+
+        private void printDocumentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
     }
 
 

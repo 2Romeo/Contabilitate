@@ -34,7 +34,12 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.serializeazaFisiereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deserializeazaFisiereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restaureazaDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.contextMenuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -62,9 +67,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.serializeazaFisiereToolStripMenuItem,
-            this.deserializeazaFisiereToolStripMenuItem});
+            this.deserializeazaFisiereToolStripMenuItem,
+            this.restaureazaDateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(219, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(219, 76);
             // 
             // serializeazaFisiereToolStripMenuItem
             // 
@@ -80,18 +86,59 @@
             this.deserializeazaFisiereToolStripMenuItem.Text = "Deserializeaza fisiere";
             this.deserializeazaFisiereToolStripMenuItem.Click += new System.EventHandler(this.deserializeazaFisiereToolStripMenuItem_Click);
             // 
+            // restaureazaDateToolStripMenuItem
+            // 
+            this.restaureazaDateToolStripMenuItem.Name = "restaureazaDateToolStripMenuItem";
+            this.restaureazaDateToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
+            this.restaureazaDateToolStripMenuItem.Text = "Restaureaza date";
+            this.restaureazaDateToolStripMenuItem.Click += new System.EventHandler(this.restaureazaDateToolStripMenuItem_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox1,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 28);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "Conturi",
+            "Inregistrari"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox1.Text = "Date analizate";
+            this.toolStripComboBox1.ToolTipText = "\r\n";
+            this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 25);
+            this.toolStripLabel1.Text = "Rearanjare liste";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            // 
             // Aplicatie_Contabilitate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Aplicatie_Contabilitate";
             this.Text = "Aplicatie_Contabilitate";
             this.contextMenuStrip1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,5 +149,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem serializeazaFisiereToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deserializeazaFisiereToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripMenuItem restaureazaDateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

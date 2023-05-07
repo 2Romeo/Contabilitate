@@ -28,9 +28,22 @@ namespace PawContabilitate
             this.sold_creditor = sold_creditor;
         }
 
+        public Cont()
+        {
+        }
+
         public override string ToString()
         {
             return "Numar " + numar + " Denumire " + denumire + " Sold debitor " + sold_debitor + " Sold creditor " + sold_creditor;
+        }
+
+        public static bool operator >(Cont y, Cont x)
+        {
+            return y.sold_creditor>x.sold_creditor;
+        }
+        public static bool operator <(Cont y,Cont x)
+        {
+            return y.sold_creditor < x.sold_creditor;
         }
 
 

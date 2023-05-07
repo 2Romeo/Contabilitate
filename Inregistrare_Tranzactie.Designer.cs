@@ -45,6 +45,7 @@
             this.adaugareSolduriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retragereSolduriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editareTranzactieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printeazaFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,9 +147,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vizualizareTranzactiiToolStripMenuItem,
             this.schimbaTipulTranzactieiToolStripMenuItem,
-            this.editareTranzactieToolStripMenuItem});
+            this.editareTranzactieToolStripMenuItem,
+            this.printeazaFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 128);
             // 
             // vizualizareTranzactiiToolStripMenuItem
             // 
@@ -186,6 +188,13 @@
             this.editareTranzactieToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.editareTranzactieToolStripMenuItem.Text = "Editare Tranzactie";
             this.editareTranzactieToolStripMenuItem.Click += new System.EventHandler(this.editareTranzactieToolStripMenuItem_Click);
+            // 
+            // printeazaFisierToolStripMenuItem
+            // 
+            this.printeazaFisierToolStripMenuItem.Name = "printeazaFisierToolStripMenuItem";
+            this.printeazaFisierToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.printeazaFisierToolStripMenuItem.Text = "Printeaza fisier";
+            this.printeazaFisierToolStripMenuItem.Click += new System.EventHandler(this.printeazaFisierToolStripMenuItem_Click);
             // 
             // Inregistrare_Tranzactie
             // 
@@ -231,5 +240,6 @@
         private System.Windows.Forms.ToolStripMenuItem adaugareSolduriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem retragereSolduriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editareTranzactieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printeazaFisierToolStripMenuItem;
     }
 }

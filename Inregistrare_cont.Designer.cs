@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inregistrare_cont));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +44,9 @@
             this.vizualizareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stergereContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editareContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,9 +148,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vizualizareConturiToolStripMenuItem,
             this.stergereContToolStripMenuItem,
-            this.editareContToolStripMenuItem});
+            this.editareContToolStripMenuItem,
+            this.printDocumentToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 128);
             // 
             // vizualizareConturiToolStripMenuItem
             // 
@@ -168,6 +173,28 @@
             this.editareContToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
             this.editareContToolStripMenuItem.Text = "Editare cont existent";
             this.editareContToolStripMenuItem.Click += new System.EventHandler(this.editareContToolStripMenuItem_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printDocumentToolStripMenuItem
+            // 
+            this.printDocumentToolStripMenuItem.Name = "printDocumentToolStripMenuItem";
+            this.printDocumentToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.printDocumentToolStripMenuItem.Text = "Print Document";
+            this.printDocumentToolStripMenuItem.Click += new System.EventHandler(this.printDocumentToolStripMenuItem_Click);
             // 
             // Inregistrare_cont
             // 
@@ -212,5 +239,8 @@
         private System.Windows.Forms.ToolStripMenuItem vizualizareConturiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stergereContToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editareContToolStripMenuItem;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.ToolStripMenuItem printDocumentToolStripMenuItem;
     }
 }

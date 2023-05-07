@@ -9,7 +9,7 @@ namespace PawContabilitate
 {
     internal class Program
     {
-     
+        [STAThreadAttribute]
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();

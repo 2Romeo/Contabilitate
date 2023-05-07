@@ -28,7 +28,7 @@ namespace PawContabilitate
 
         public override string ToString()
         {
-            return "Cont debitor " + cont_debitor + "\ncont creditor: " + cont_creditor + "\nvaloare: " + valoare + "\ndata: " + data+"\n";
+            return "Cont debitor " + cont_debitor + " cont creditor: " + cont_creditor + " valoare: " + valoare + " data: " + data+"\n";
         }
 
  

@@ -38,6 +38,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,18 @@
     <Compile Include="Aplicatie Contabilitate.Designer.cs">
       <DependentUpon>Aplicatie Contabilitate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Charts_Conturi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Charts_Conturi.Designer.cs">
+      <DependentUpon>Charts_Conturi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Charts_tranzactii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Charts_tranzactii.Designer.cs">
+      <DependentUpon>Charts_tranzactii.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cont.cs" />
     <Compile Include="Inregistrare_cont.cs">
       <SubType>Form</SubType>
@@ -65,22 +78,38 @@
     <Compile Include="Inregistrare_Tranzactie.Designer.cs">
       <DependentUpon>Inregistrare_Tranzactie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modif Liste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modif Liste.Designer.cs">
+      <DependentUpon>Modif Liste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tranzactie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Charts.Designer.Tranzactii" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Aplicatie Contabilitate.resx">
       <DependentUpon>Aplicatie Contabilitate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Charts_Conturi.resx">
+      <DependentUpon>Charts_Conturi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Charts_tranzactii.resx">
+      <DependentUpon>Charts_tranzactii.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inregistrare_cont.resx">
       <DependentUpon>Inregistrare_cont.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inregistrare_Tranzactie.resx">
       <DependentUpon>Inregistrare_Tranzactie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modif Liste.resx">
+      <DependentUpon>Modif Liste.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

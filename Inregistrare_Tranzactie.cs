@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Diagnostics.Eventing.Reader;
 using Microsoft.VisualBasic;
 using System.Linq.Expressions;
+using System.Drawing.Printing;
 
 namespace PawContabilitate
 {
@@ -277,6 +278,10 @@ namespace PawContabilitate
                 btn_submit_Click(sender, e);
             if (e.Control && e.KeyCode.ToString() == "X")
                 btn_clearAll_Click(sender, e);
+        }
+
+        private void printeazaFisierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }
