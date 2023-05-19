@@ -17,16 +17,20 @@ namespace PawContabilitate
     [Serializable]
     public partial class Aplicatie_Contabilitate : Form
     {
+        internal static Inregistrare_cont formCont= new Inregistrare_cont();
+        internal static Inregistrare_Tranzactie formTranz= new Inregistrare_Tranzactie();
+        
         public Aplicatie_Contabilitate()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Inregistrare_cont newform = new Inregistrare_cont();
+            
             this.Hide();
-            newform.ShowDialog();
+            formCont.ShowDialog();
             this.Show();
         }
 
@@ -36,9 +40,9 @@ namespace PawContabilitate
             {
                 if (Inregistrare_cont.conturi.Count == 0)
                     throw new Exception("Nu exista conturi introduse");
-                Inregistrare_Tranzactie newform = new Inregistrare_Tranzactie();
+                
                 this.Hide();
-                newform.ShowDialog();
+                formTranz.ShowDialog();
                 this.Show();
             }
             catch (Exception ex)
@@ -139,6 +143,12 @@ namespace PawContabilitate
             Modif_Liste form = new Modif_Liste();
             form.ShowDialog();
 
+        }
+
+        private void btn_BD_Click(object sender, EventArgs e)
+        {
+            BDform form = new BDform();
+            form.ShowDialog();
         }
     }
 }

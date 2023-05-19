@@ -15,6 +15,8 @@ namespace PawContabilitate
 {
     public partial class Inregistrare_cont : Form
     {
+        internal event EventHandler SubmitPressed;
+
         internal static List<Cont> conturi = new List<Cont>();
         public Inregistrare_cont()
         {
@@ -40,7 +42,7 @@ namespace PawContabilitate
         {
             Inregistrare_cont_Load(sender, e);
         }
-        private void btn_submit_Click(object sender, EventArgs e)
+        internal void btn_submit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -57,6 +59,7 @@ namespace PawContabilitate
                     throw new Exception("valoarea soludului debitor este necompletata");
                 else
                 {
+                    
                     int numar = Convert.ToInt32(tb_numar.Text);
                     string denumire= Convert.ToString(tb_denumire.Text);
                     double sold_creditor=Convert.ToDouble(tb_soldCreditor.Text);
@@ -68,11 +71,10 @@ namespace PawContabilitate
                     using (StreamWriter writer = new StreamWriter("conturi.txt",true))
                     { 
                         writer.WriteLine(aux.ToString());
-                        writer.WriteLine("");
-                   
+                        writer.WriteLine(""); 
                     }
 
-                    
+                    SubmitPressed.Invoke(sender, e);
                 }
                 //}
             }

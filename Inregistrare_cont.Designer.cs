@@ -44,9 +44,9 @@
             this.vizualizareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stergereContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editareContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,7 +151,7 @@
             this.editareContToolStripMenuItem,
             this.printDocumentToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 100);
             // 
             // vizualizareConturiToolStripMenuItem
             // 
@@ -174,6 +174,13 @@
             this.editareContToolStripMenuItem.Text = "Editare cont existent";
             this.editareContToolStripMenuItem.Click += new System.EventHandler(this.editareContToolStripMenuItem_Click);
             // 
+            // printDocumentToolStripMenuItem
+            // 
+            this.printDocumentToolStripMenuItem.Name = "printDocumentToolStripMenuItem";
+            this.printDocumentToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
+            this.printDocumentToolStripMenuItem.Text = "Print Document";
+            this.printDocumentToolStripMenuItem.Click += new System.EventHandler(this.printDocumentToolStripMenuItem_Click);
+            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -188,13 +195,6 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printDocumentToolStripMenuItem
-            // 
-            this.printDocumentToolStripMenuItem.Name = "printDocumentToolStripMenuItem";
-            this.printDocumentToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
-            this.printDocumentToolStripMenuItem.Text = "Print Document";
-            this.printDocumentToolStripMenuItem.Click += new System.EventHandler(this.printDocumentToolStripMenuItem_Click);
             // 
             // Inregistrare_cont
             // 
@@ -229,10 +229,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_numar;
-        private System.Windows.Forms.TextBox tb_denumire;
-        private System.Windows.Forms.TextBox tb_soldDebitor;
-        private System.Windows.Forms.TextBox tb_soldCreditor;
         private System.Windows.Forms.Button btn_submit;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -242,5 +238,9 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.ToolStripMenuItem printDocumentToolStripMenuItem;
+        internal System.Windows.Forms.TextBox tb_numar;
+        internal System.Windows.Forms.TextBox tb_denumire;
+        internal System.Windows.Forms.TextBox tb_soldDebitor;
+        internal System.Windows.Forms.TextBox tb_soldCreditor;
     }
 }

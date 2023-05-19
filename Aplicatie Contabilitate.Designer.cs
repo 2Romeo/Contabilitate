@@ -38,6 +38,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btn_BD = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -123,12 +124,23 @@
             this.toolStripLabel1.Text = "Rearanjare liste";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
+            // btn_BD
+            // 
+            this.btn_BD.Location = new System.Drawing.Point(355, 267);
+            this.btn_BD.Name = "btn_BD";
+            this.btn_BD.Size = new System.Drawing.Size(96, 46);
+            this.btn_BD.TabIndex = 3;
+            this.btn_BD.Text = "Conectare BD";
+            this.btn_BD.UseVisualStyleBackColor = true;
+            this.btn_BD.Click += new System.EventHandler(this.btn_BD_Click);
+            // 
             // Aplicatie_Contabilitate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.btn_BD);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripMenuItem restaureazaDateToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Button btn_BD;
     }
 }

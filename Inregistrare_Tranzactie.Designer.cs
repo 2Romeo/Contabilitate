@@ -150,7 +150,7 @@
             this.editareTranzactieToolStripMenuItem,
             this.printeazaFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 128);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(243, 100);
             // 
             // vizualizareTranzactiiToolStripMenuItem
             // 
@@ -228,12 +228,8 @@
         private System.Windows.Forms.Label lbl_creditor;
         private System.Windows.Forms.Label lbl_val;
         private System.Windows.Forms.Label lbl_debitor;
-        private System.Windows.Forms.TextBox tBox_debitor;
         private System.Windows.Forms.Button btn_clearAll;
         private System.Windows.Forms.Button btn_submit;
-        private System.Windows.Forms.TextBox tBox_data;
-        private System.Windows.Forms.TextBox tBox_creditor;
-        private System.Windows.Forms.TextBox tBox_val;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem vizualizareTranzactiiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem schimbaTipulTranzactieiToolStripMenuItem;
@@ -241,5 +237,9 @@
         private System.Windows.Forms.ToolStripMenuItem retragereSolduriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editareTranzactieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printeazaFisierToolStripMenuItem;
+        internal System.Windows.Forms.TextBox tBox_debitor;
+        internal System.Windows.Forms.TextBox tBox_data;
+        internal System.Windows.Forms.TextBox tBox_creditor;
+        internal System.Windows.Forms.TextBox tBox_val;
     }
 }

@@ -17,8 +17,10 @@ using System.Drawing.Printing;
 namespace PawContabilitate
 {
     [Serializable]
+    
     public partial class Inregistrare_Tranzactie : Form
     {
+        internal event EventHandler SubmitPressed;
         internal static List<Tranzactie> tranzactii = new List<Tranzactie>();
         public Inregistrare_Tranzactie()
         {
@@ -43,10 +45,7 @@ namespace PawContabilitate
 
             try
             {
-                //int debitor = Convert.ToInt32(tBox_debitor.Text);
-                //int creditor = Convert.ToInt32(tBox_creditor.Text);
-                //DateTime data = Convert.ToDateTime(tBox_data.Text);
-                //double val = Convert.ToDouble(tBox_val.Text);
+                
 
                 if (tBox_debitor.Text == "")
                     throw new Exception("debitor-ul este necompletat");
@@ -59,13 +58,13 @@ namespace PawContabilitate
                 else
                                 if (tBox_data.Text == "")
                     throw new Exception("data este necompletata");
-                //   else//conditiile de validare
-                //  {
-                //debitor,creditor,data,val adaugate in plus
+               
                 int debitor = Convert.ToInt32(tBox_debitor.Text);
                 int creditor = Convert.ToInt32(tBox_creditor.Text);
                 DateTime data = Convert.ToDateTime(tBox_data.Text);
                 double val = Convert.ToDouble(tBox_val.Text);
+
+               
 
                 int ok = 2;
                     foreach (var x in Inregistrare_cont.conturi)
@@ -79,9 +78,9 @@ namespace PawContabilitate
                         throw new Exception("nu exista contul debitor si nici contul creditor");
                     if (ok == 1)
                         throw new Exception("nu exista contul debitor sau contul creditor");
-                //}
 
 
+                SubmitPressed.Invoke(sender, e);//invocam si celelalte evenimente legate
 
                 foreach (var s in Inregistrare_cont.conturi)
                     if (val > s.Sold_creditor && s.Numar == creditor)
@@ -112,13 +111,15 @@ namespace PawContabilitate
                     writer.WriteLine(aux.ToString());
                 }
                 btn_clearAll_Click(sender, e);
+
+          
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            
         }
 
         private void editareTranzactieToolStripMenuItem_Click(object sender, EventArgs e)
