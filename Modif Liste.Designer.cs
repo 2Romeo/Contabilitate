@@ -62,7 +62,7 @@
             this.listView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.listView1_ItemDrag);
             this.listView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView1_DragDrop);
             this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listView1_DragEnter);
-                      // 
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Numar";
@@ -70,6 +70,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Denumire";
+            this.columnHeader2.Width = 57;
             // 
             // columnHeader3
             // 

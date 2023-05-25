@@ -80,7 +80,7 @@ namespace PawContabilitate
                         throw new Exception("nu exista contul debitor sau contul creditor");
 
 
-                SubmitPressed.Invoke(sender, e);//invocam si celelalte evenimente legate
+                
 
                 foreach (var s in Inregistrare_cont.conturi)
                     if (val > s.Sold_creditor && s.Numar == creditor)
@@ -112,7 +112,9 @@ namespace PawContabilitate
                 }
                 btn_clearAll_Click(sender, e);
 
-          
+
+                SubmitPressed.Invoke(sender, e);
+
             }
 
             catch (Exception ex)

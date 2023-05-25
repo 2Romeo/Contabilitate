@@ -44,7 +44,6 @@
             this.vizualizareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stergereContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editareContToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.contextMenuStrip1.SuspendLayout();
@@ -148,10 +147,9 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vizualizareConturiToolStripMenuItem,
             this.stergereContToolStripMenuItem,
-            this.editareContToolStripMenuItem,
-            this.printDocumentToolStripMenuItem});
+            this.editareContToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 104);
             // 
             // vizualizareConturiToolStripMenuItem
             // 
@@ -173,13 +171,6 @@
             this.editareContToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
             this.editareContToolStripMenuItem.Text = "Editare cont existent";
             this.editareContToolStripMenuItem.Click += new System.EventHandler(this.editareContToolStripMenuItem_Click);
-            // 
-            // printDocumentToolStripMenuItem
-            // 
-            this.printDocumentToolStripMenuItem.Name = "printDocumentToolStripMenuItem";
-            this.printDocumentToolStripMenuItem.Size = new System.Drawing.Size(213, 24);
-            this.printDocumentToolStripMenuItem.Text = "Print Document";
-            this.printDocumentToolStripMenuItem.Click += new System.EventHandler(this.printDocumentToolStripMenuItem_Click);
             // 
             // printPreviewDialog1
             // 
@@ -237,7 +228,6 @@
         private System.Windows.Forms.ToolStripMenuItem editareContToolStripMenuItem;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.ToolStripMenuItem printDocumentToolStripMenuItem;
         internal System.Windows.Forms.TextBox tb_numar;
         internal System.Windows.Forms.TextBox tb_denumire;
         internal System.Windows.Forms.TextBox tb_soldDebitor;

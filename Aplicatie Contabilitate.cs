@@ -63,7 +63,7 @@ namespace PawContabilitate
             sf.Close();
             FileStream sf1 = new FileStream("tranzactii.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             bf.Serialize(sf1, text1);
-            sf.Close();
+            sf1.Close();
         }
         private void deserializeazaFisiereToolStripMenuItem_Click(object sender, EventArgs e)
         {   
@@ -149,6 +149,11 @@ namespace PawContabilitate
         {
             BDform form = new BDform();
             form.ShowDialog();
+        }
+
+        private void Aplicatie_Contabilitate_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

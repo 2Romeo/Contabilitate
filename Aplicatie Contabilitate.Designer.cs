@@ -146,6 +146,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Aplicatie_Contabilitate";
             this.Text = "Aplicatie_Contabilitate";
+            this.Load += new System.EventHandler(this.Aplicatie_Contabilitate_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

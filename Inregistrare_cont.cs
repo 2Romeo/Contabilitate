@@ -27,7 +27,7 @@ namespace PawContabilitate
         private void Inregistrare_cont_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.Control && e.KeyCode.ToString() == "A")//daca apasam control + A
-               btn_submit_Click(sender, e);
+                btn_submit_Click(sender, e);
             if(e.Control && e.KeyCode.ToString()=="X")
                 btn_clear_Click(sender, e);
         }
@@ -121,7 +121,7 @@ namespace PawContabilitate
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
